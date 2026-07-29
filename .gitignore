@@ -1,21 +1,2 @@
-# 忽略 Visual Studio 隐藏配置目录
-.vs/
-
-# 忽略编译输出目录
-x64/
-x86/
-Debug/
-Release/
-[Dd]ebug/
-[Rr]elease/
-
-# 忽略具体编译生成的中间文件与可执行文件
-*.exe
-*.pdb
-*.idb
-*.ipch
-*.tlog
-*.obj
-*.ilk
-*.sdf
-*.opensdf
+bin/
+intermediates/
