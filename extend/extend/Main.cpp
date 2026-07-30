@@ -1,0 +1,50 @@
+#include<iostream>
+class Entity
+{
+public:
+	float X = 0.0f, Y = 0.0f;
+	Entity()
+	{
+
+	}
+	Entity(float x, float y)
+	{
+		X = x;
+		Y = y;
+	}
+
+	void Move(float xa, float ya)
+	{
+		X += xa;
+		Y += ya;
+		std::cout << X <<" " << Y << std::endl;
+	}
+	~Entity()
+	{
+
+	}
+};
+
+class Player :public Entity
+{
+public:
+	const char* Name = "player";
+
+	void PrintName()
+	{
+		std::cout << Name << std::endl;
+	}
+};
+int main()
+{
+	Entity e(10.0f, 20.0f);
+	e.Move(5.0f, 5.0f);
+	std::cout << sizeof(e) << std::endl;//8(两个float类型)
+
+	Player player;
+	player.Name = "qinjinyan";
+	player.PrintName();
+	std::cout << sizeof(player) << std::endl;//16(多了个指针8个字节)
+
+	return 0;
+}
