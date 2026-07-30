@@ -1,2 +1,24 @@
-bin/
-intermediates/
+# 在根目录新建/写入 .gitignore 忽略规则
+cat << 'EOF' > .gitignore
+# Visual Studio 临时缓存目录
+.vs/
+
+# 编译输出目录
+Debug/
+Release/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+# 编译生成的各类中间件与二进制文件
+*.exe
+*.dll
+*.pdb
+*.idb
+*.ipch
+*.tlog
+*.log
+*.obj
+*.ilk
+EOF
